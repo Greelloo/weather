@@ -52,7 +52,7 @@ body {
   box-shadow: none;
   padding-left: 15px;
   cursor: text;
-  width: 90%;
+  width: 230px;
   border-radius: auto;
   background: rgb(235, 235, 235);
   font-size: 16px;
@@ -106,9 +106,9 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 3rem;
 }
 #main main .loc-wrapper {
-  padding: 2rem;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -133,7 +133,29 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
+  margin-top: 2rem;
 }
-#main main .degree img {
-  width: 150px;
+#main main .degree .deg-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main main .degree .deg-data .temp {
+  font-size: 4rem;
+  font-weight: 600;
+}
+#main main .degree .deg-data .temp .sign-deg {
+  color: #fde907;
+}
+#main main .degree .deg-data .temp .sign {
+  font-weight: 400;
+}
+#main main .degree .deg-data img {
+  width: 100px;
+}
+#main main .degree .label {
+  text-transform: capitalize;
+  font-weight: 600;
+  letter-spacing: 1px;
+  font-size: 1.2rem;
 }/*# sourceMappingURL=main.css.map */

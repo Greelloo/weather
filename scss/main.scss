@@ -42,7 +42,7 @@ body {
                   box-shadow: none;
                   padding-left: 15px;
                   cursor: text;
-                  width: 90%;
+                  width: 230px;
                   border-radius: auto;
                   background: rgb(235, 235, 235);
                   font-size: 16px;
@@ -108,9 +108,10 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        margin-top: 3rem;
 
         & .loc-wrapper {
-            padding: 2rem;
+            // padding: 2rem;
             width: 100%;
             display: flex;
             justify-content: center;
@@ -139,9 +140,35 @@ body {
             display: flex;
             align-items: center;
             flex-direction: column;
+            margin-top: 2rem;
 
-            & img {
-                width: 150px;
+            & .deg-data {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & .temp {
+                    font-size: 4rem;
+                    font-weight: weight(medium);
+
+                    & .sign-deg {
+                        color: #fde907;
+                    }
+                    & .sign {
+                        font-weight: weight(regular);
+                    }
+                }
+
+                & img {
+                    width: 100px;
+                }
+            }
+
+            & .label {
+                text-transform: capitalize;
+                font-weight: weight(medium);
+                letter-spacing: 1px;
+                font-size: 1.2rem;
             }
         }
     }
