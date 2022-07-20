@@ -21,6 +21,9 @@ body {
   align-items: center;
   width: 90%;
 }
+#header header .search-container {
+  flex-basis: 70%;
+}
 #header header .search-container .search-box {
   transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
   width: 30px;
@@ -69,6 +72,7 @@ body {
   border-radius: 15px;
   width: 90px;
   display: flex;
+  flex-basis: 30%;
   justify-content: space-around;
   padding: 7px;
   cursor: pointer;
