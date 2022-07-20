@@ -6,6 +6,7 @@ window.addEventListener("load", () => {
   const sliderMoon = document.querySelector('.slider-moon')
   const switchButton = document.querySelector('.switch-button')
   const city = document.querySelector('.city')
+  const degreeIcon = document.querySelector('.degree img')
 
   // Setting up the date
   const date = new Date();
@@ -65,11 +66,15 @@ window.addEventListener("load", () => {
 
   // API call
   let apiData = {}
-  const url = 'https://api.openweathermap.org/data/2.5/weather?q=lagos&appid=c2f18040d6f9d805ddb525840e080a2a'
+  const url = 'https://api.openweathermap.org/data/2.5/weather?q=kano&appid=c2f18040d6f9d805ddb525840e080a2a'
   fetch(url)
     .then(response => response.json())
     .then(data => {
       loc.innerHTML =  `<i class="fa-solid fa-location-pin"></i> <span class="city">${data.name}</span>, ${data.sys.country}`
+
+      iconUrl = `https://api.openweathermap.org/img/w/${data.weather[0].icon}`
+      degreeIcon.src = iconUrl;
+
       console.log(data)
     })
     .catch(err => console.log(err))

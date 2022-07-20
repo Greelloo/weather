@@ -101,6 +101,12 @@ body {
   color: #fde907;
 }
 
+#main main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 #main main .loc-wrapper {
   padding: 2rem;
   width: 100%;
@@ -116,4 +122,18 @@ body {
 #main main .loc-wrapper .location-day .loc .city {
   font-weight: 800;
   text-transform: uppercase;
+}
+#main main .degree {
+  height: 50vh;
+  width: 90vw;
+  background: url("../images/map.png");
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+#main main .degree img {
+  width: 150px;
 }/*# sourceMappingURL=main.css.map */

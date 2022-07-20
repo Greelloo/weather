@@ -104,6 +104,11 @@ body {
 
 #main {
     & main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
         & .loc-wrapper {
             padding: 2rem;
             width: 100%;
@@ -121,6 +126,22 @@ body {
                     font-weight: weight(bold);
                     text-transform: uppercase;
                 }
+            }
+        }
+
+        & .degree {
+            height: 50vh;
+            width: 90vw;
+            background: url('../images/map.png');
+            background-position: center;
+            background-size: cover;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            & img {
+                width: 150px;
             }
         }
     }
