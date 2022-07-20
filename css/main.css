@@ -55,6 +55,7 @@ body {
   width: 90%;
   border-radius: auto;
   background: rgb(235, 235, 235);
+  font-size: 16px;
   color: black;
 }
 #header header .search-container .search-box:focus + label .search-icon {
