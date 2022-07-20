@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  background: #101014;
+  color: #c2c2c3;
+}
+
+#header {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.6rem;
+}
+#header header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+}
+#header header .search-container .search-box {
+  transition: width 0.6s, border-radius 0.6s, background 0.6s, box-shadow 0.6s;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: #101014;
+  box-shadow: 0 0 0 3px rgb(61, 71, 82);
+}
+#header header .search-container .search-box + label .search-icon {
+  color: #c2c2c3;
+}
+#header header .search-container .search-box:hover {
+  color: white;
+  background: rgb(200, 200, 200);
+  box-shadow: 0 0 0 5px rgb(61, 71, 82);
+}
+#header header .search-container .search-box:hover + label .search-icon {
+  color: white;
+}
+#header header .search-container .search-box:focus {
+  transition: width 0.6s cubic-bezier(0, 1.22, 0.66, 1.39), border-radius 0.6s, background 0.6s;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding-left: 15px;
+  cursor: text;
+  width: 230px;
+  border-radius: auto;
+  background: rgb(235, 235, 235);
+  color: black;
+}
+#header header .search-container .search-box:focus + label .search-icon {
+  color: black;
+}
+#header header .search-container .search-icon {
+  position: relative;
+  left: -25px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+#header header .switch-button {
+  box-shadow: 0 0 0 3px rgb(61, 71, 82);
+  border-radius: 15px;
+  width: 90px;
+  display: flex;
+  justify-content: space-around;
+  padding: 7px;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+#header header .switch-button .slider {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 55%;
+  background: #29292a;
+  border-radius: inherit;
+  z-index: -1;
+  transition: left 0.4s ease;
+}
+#header header .switch-button .slider.slider-right {
+  left: 45%;
+}
+#header header .switch-button .slider.slider-left {
+  left: 0%;
+}
+#header header .switch-button .slider-sun {
+  color: #fde907;
+}
+
+#main main .loc-wrapper {
+  padding: 2rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main main .loc-wrapper .location-day {
+  text-align: center;
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+#main main .loc-wrapper .location-day .loc .city {
+  font-weight: 800;
+  text-transform: uppercase;
+}/*# sourceMappingURL=main.css.map */

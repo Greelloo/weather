@@ -1,0 +1,122 @@
+@import './reset', './variables';
+@function weight($weight-name) {
+    @return map-get($font-weights, $weight-name)
+}
+
+body {
+    background: $primary-dark-color;
+    color: $primary-light-color;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.6rem;
+    & header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+
+        & .search-container {
+            .search-box {
+                transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+                width: 30px;
+                height: 30px;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+                background: $primary-dark-color;
+                box-shadow: 0 0 0 3px rgb(61, 71, 82);
+                & + label .search-icon {    color: $primary-light-color    }
+                &:hover {
+                  color: white;
+                  background: rgb(200, 200, 200);
+                  box-shadow: 0 0 0 5px rgb(61, 71, 82);
+                  & + label .search-icon {    color: white    }
+                }
+                &:focus {
+                  transition: width $tl cubic-bezier(0,1.22,.66,1.39), border-radius $tl, background $tl;
+                  border: none;outline: none;
+                  box-shadow: none;
+                  padding-left: 15px;
+                  cursor: text;
+                  width: 230px;
+                  border-radius: auto;
+                  background: rgb(235, 235, 235);
+                  color: black;
+                  & + label .search-icon {    color: black;    }
+                }
+              }
+              
+              .search-icon {
+                position: relative;
+                left: -25px;
+                color: white;
+                cursor: pointer;
+                font-size: 14px;
+              }
+        }
+
+        & .switch-button {
+            box-shadow: 0 0 0 3px rgb(61, 71, 82);
+            border-radius: 15px;
+            width: 90px;
+            display: flex;
+            justify-content: space-around;
+            padding: 7px;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+
+            & .slider {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 55%;
+                background: #29292a;
+                border-radius: inherit;
+                z-index: -1;
+                transition: left 0.4s ease;
+
+                &.slider-right {
+                    left: 45%;
+                }
+                &.slider-left {
+                    left: 0%;
+                }
+            }
+
+            & .slider-sun {
+                color: #fde907;
+            }
+
+
+        }
+    }
+}
+
+#main {
+    & main {
+        & .loc-wrapper {
+            padding: 2rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+
+            & .location-day {
+                text-align: center;
+                font-size: 20px;
+                letter-spacing: 1px;
+
+                & .loc .city {
+                    font-weight: weight(bold);
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}

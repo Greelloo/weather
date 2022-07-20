@@ -1,0 +1,37 @@
+.search-box {
+  transition: width $tl, border-radius $tl, background $tl, box-shadow $tl;
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  background: $primary-dark-color;
+  box-shadow: 0 0 0 2px rgb(61, 71, 82);
+  & + label .search-icon {    color: $primary-light-color    }
+  &:hover {
+    color: white;
+    background: rgb(200, 200, 200);
+    box-shadow: 0 0 0 5px rgb(61, 71, 82);
+    & + label .search-icon {    color: white    }
+  }
+  &:focus {
+    transition: width $tl cubic-bezier(0,1.22,.66,1.39), border-radius $tl, background $tl;
+    border: none;outline: none;
+    box-shadow: none;
+    padding-left: 15px;
+    cursor: text;
+    width: 250px;
+    border-radius: auto;
+    background: rgb(235, 235, 235);
+    color: black;
+    & + label .search-icon {    color: black;    }
+  }
+}
+
+.search-icon {
+  position: relative;
+  left: -25px;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
