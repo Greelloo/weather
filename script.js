@@ -6,6 +6,8 @@ window.addEventListener("load", () => {
   const degreeIcon = document.querySelector(".description img");
   const temp = document.querySelector(".degree .temp");
   const label = document.querySelector(".degree .label");
+  const degree = document.querySelector(".degree");
+  const body = document.querySelectorAll("body");
 
   // check if user location is active
   if (navigator.geolocation) {
@@ -53,6 +55,10 @@ window.addEventListener("load", () => {
         moon = false;
       } else {
         slider.classList.toggle("slider-right");
+        body.forEach(body => {
+          body.classList.toggle('light')
+        })
+        degree.classList.toggle('light')
         moon = true;
       }
     });

@@ -6,11 +6,20 @@
 }
 
 body {
-  background-color: #101014;
-  color: #c2c2c3;
   display: flex;
   align-items: center;
   flex-direction: column;
+  background-color: #101014;
+  color: #c2c2c3;
+}
+
+body.light {
+  background: #c2c2c3;
+  color: #101014;
+}
+
+degree.light {
+  background: url("../images/light-map.png");
 }
 
 .layout {
@@ -144,13 +153,18 @@ body {
   height: 50vh;
   width: 90vw;
   background: url("../images/map.png");
-  background-position: center;
+  background-position: top;
   background-size: cover;
   border-radius: 50%;
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 2rem;
+}
+#main main .degree.light {
+  background: url("../images/light-map.png");
+  background-position: top;
+  background-size: cover;
 }
 #main main .degree .deg-data {
   display: flex;
@@ -175,13 +189,18 @@ body {
 }
 #main main .degree .description .label {
   text-transform: capitalize;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 1px;
   font-size: 1.2rem;
   margin: 0 0.5rem;
 }
 #main main .degree .description .icon {
   width: 60px;
+}
+@media screen and (min-width: 600px) {
+  #main main .degree {
+    width: 50vw;
+  }
 }
 @media screen and (min-width: 600px) {
   #main main {

@@ -4,11 +4,20 @@
 }
 
 body {
-    background-color: $primary-dark-color;
-    color: $primary-light-color;
     display: flex;
     align-items: center;
     flex-direction: column;
+    background-color: $primary-dark-color;
+    color: $primary-light-color;
+}
+
+body.light {
+    background: $primary-light-color;
+    color: $primary-dark-color;
+}
+
+degree.light {
+    background: url('../images/light-map.png');
 }
 
 .layout {
@@ -160,13 +169,19 @@ body {
             height: 50vh;
             width: 90vw;
             background: url('../images/map.png');
-            background-position: center;
+            background-position: top;
             background-size: cover;
             border-radius: 50%;
             display: flex;
             align-items: center;
             flex-direction: column;
             margin-top: 2rem;
+
+            &.light {
+                background: url('../images/light-map.png');
+                background-position: top;
+                background-size: cover;
+            }
 
             & .deg-data {
                 display: flex;
@@ -194,7 +209,7 @@ body {
 
                 & .label {
                     text-transform: capitalize;
-                    font-weight: weight(medium);
+                    font-weight: weight(semi-bold);
                     letter-spacing: 1px;
                     font-size: 1.2rem;
                     margin: 0 .5rem;
@@ -202,6 +217,12 @@ body {
 
                 & .icon {
                     width: 60px;
+                }
+            }
+
+            @media screen and (min-width: 600px) {
+                & {
+                    width: 50vw; 
                 }
             }
         }
