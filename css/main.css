@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #101014;
+  background-color: #101014;
   color: #c2c2c3;
 }
 
@@ -141,8 +141,9 @@ body {
   align-items: center;
 }
 #main main .degree .deg-data .temp {
-  font-size: 4rem;
+  font-size: 5rem;
   font-weight: 600;
+  cursor: pointer;
 }
 #main main .degree .deg-data .temp .sign-deg {
   color: #fde907;
@@ -150,12 +151,18 @@ body {
 #main main .degree .deg-data .temp .sign {
   font-weight: 400;
 }
-#main main .degree .deg-data img {
-  width: 100px;
+#main main .degree .description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-#main main .degree .label {
+#main main .degree .description .label {
   text-transform: capitalize;
   font-weight: 600;
   letter-spacing: 1px;
   font-size: 1.2rem;
+  margin: 0 0.5rem;
+}
+#main main .degree .description .icon {
+  width: 60px;
 }/*# sourceMappingURL=main.css.map */

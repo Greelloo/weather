@@ -4,7 +4,7 @@
 }
 
 body {
-    background: $primary-dark-color;
+    background-color: $primary-dark-color;
     color: $primary-light-color;
 }
 
@@ -148,8 +148,9 @@ body {
                 align-items: center;
 
                 & .temp {
-                    font-size: 4rem;
+                    font-size: 5rem;
                     font-weight: weight(medium);
+                    cursor: pointer;
 
                     & .sign-deg {
                         color: #fde907;
@@ -158,17 +159,24 @@ body {
                         font-weight: weight(regular);
                     }
                 }
-
-                & img {
-                    width: 100px;
-                }
             }
 
-            & .label {
-                text-transform: capitalize;
-                font-weight: weight(medium);
-                letter-spacing: 1px;
-                font-size: 1.2rem;
+            .description {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                & .label {
+                    text-transform: capitalize;
+                    font-weight: weight(medium);
+                    letter-spacing: 1px;
+                    font-size: 1.2rem;
+                    margin: 0 .5rem;
+                }
+
+                & .icon {
+                    width: 60px;
+                }
             }
         }
     }
