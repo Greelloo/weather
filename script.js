@@ -111,7 +111,7 @@ window.addEventListener("load", () => {
         if (count % 2 === 0) {
           temp.innerHTML = `${tempDegree}<span class='sign-deg'>°</span><span class='sign'>c</span>`;
         } else {
-          temp.innerHTML = `${fahrenheit}<span class='sign-deg'>°</span><span class='sign'>c</span>`;
+          temp.innerHTML = `${fahrenheit}<span class='sign-deg'>°</span><span class='sign'>F</span>`;
         }
 
         console.log(count)
