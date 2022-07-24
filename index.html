@@ -10,44 +10,46 @@
     <title>Weather | Grillo</title>
 </head>
 <body>
-    <section id="header">
-        <header>
-            <!-- Search input -->
-            <div class="search-container">
-                <input id="search-box" type="text" class="search-box" />
-                <label for="search-box"><i class="fa-solid fa-magnifying-glass search-icon"></i></label>
-            </div>
-            <!-- search input ended -->
-
-            <!-- light-dark mode toggle switch -->
-            <div class="switch-button">
-                <i class="fa-solid fa-moon slider-moon"></i>
-                <i class="fa-solid fa-sun slider-sun"></i>
-                <div class="slider"></div>
-            </div>
-            <!-- light-dark mode toggle switch ended -->
-        </header>
-    </section>
-
-    <section id="main">
-        <main>
-            <div class="loc-wrapper">
-                <div class="location-day">
-                    <p class="day"></p>
-                    <p class="loc"></p>
+    <div class="layout">
+        <section id="header">
+            <header>
+                <!-- Search input -->
+                <div class="search-container">
+                    <input id="search-box" type="text" class="search-box" />
+                    <label for="search-box"><i class="fa-solid fa-magnifying-glass search-icon"></i></label>
                 </div>
-            </div>
-
-            <div class="degree">
-                <div class="deg-data">
-                    <div class="temp"></div>
+                <!-- search input ended -->
+    
+                <!-- light-dark mode toggle switch -->
+                <div class="switch-button">
+                    <i class="fa-solid fa-moon slider-moon"></i>
+                    <i class="fa-solid fa-sun slider-sun"></i>
+                    <div class="slider"></div>
                 </div>
-                <div class="description">
-                    <div><img class="icon"></div><div><span class="label"></span></div>
+                <!-- light-dark mode toggle switch ended -->
+            </header>
+        </section>
+    
+        <section id="main">
+            <main>
+                <div class="loc-wrapper">
+                    <div class="location-day">
+                        <p class="day"></p>
+                        <p class="loc"></p>
+                    </div>
                 </div>
-            </div>
-        </main>
-    </section>
+    
+                <div class="degree">
+                    <div class="deg-data">
+                        <div class="temp"></div>
+                    </div>
+                    <div class="description">
+                        <div><img class="icon"></div><div><span class="label"></span></div>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
 
     <script src="./script.js"></script>
 </body>

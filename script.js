@@ -98,12 +98,24 @@ window.addEventListener("load", () => {
 
       // getting temperature degree in celsius
       const tempDegree = Math.round(data.main.temp);
+      temp.innerHTML = `${tempDegree}<span class='sign-deg'>°</span><span class='sign'>c</span>`;
 
       // convert celsius to fahrenheit
       let fahrenheit = Math.round((tempDegree * 1.8) + 32)
-      console.log(fahrenheit)
-      temp.innerHTML = `${tempDegree}<span class='sign-deg'>°</span><span class='sign'>c</span>`;
+      
+      // toggle between fahrenheit and celsius
+      var count = 0;
+      temp.addEventListener('click', () => {
+        count++;
 
+        if (count % 2 === 0) {
+          temp.innerHTML = `${tempDegree}<span class='sign-deg'>°</span><span class='sign'>c</span>`;
+        } else {
+          temp.innerHTML = `${fahrenheit}<span class='sign-deg'>°</span><span class='sign'>c</span>`;
+        }
+
+        console.log(count)
+      })
       // weather description
       label.textContent = data.weather[0].description;
     };

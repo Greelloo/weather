@@ -6,6 +6,13 @@
 body {
     background-color: $primary-dark-color;
     color: $primary-light-color;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layout {
+    max-width: 900px;
 }
 
 #header {
@@ -29,12 +36,31 @@ body {
                 cursor: pointer;
                 background: $primary-dark-color;
                 box-shadow: 0 0 0 3px rgb(61, 71, 82);
-                & + label .search-icon {    color: $primary-light-color    }
+
+                & + label .search-icon {    
+                    color: $primary-light-color    
+                }
                 &:hover {
-                  color: white;
-                  background: rgb(200, 200, 200);
-                  box-shadow: 0 0 0 5px rgb(61, 71, 82);
-                  & + label .search-icon {    color: white    }
+                    color: white;
+                    background: rgb(200, 200, 200);
+                    box-shadow: 0 0 0 5px rgb(61, 71, 82);
+
+                    & + label .search-icon {    
+                      color: white    
+                    }
+                  
+                }
+
+                @media screen and (min-width: 600px) {
+                    & {
+                        width: 350px;
+                        background: rgb(235, 235, 235);
+                        color: black;
+
+                        & + label .search-icon {
+                            color: black;
+                          }
+                    }
                 }
                 &:focus {
                   transition: width $tl cubic-bezier(0,1.22,.66,1.39), border-radius $tl, background $tl;
@@ -177,6 +203,12 @@ body {
                 & .icon {
                     width: 60px;
                 }
+            }
+        }
+
+        @media screen and (min-width: 600px) {
+            & {
+                margin-top: 5rem;
             }
         }
     }
